@@ -8,9 +8,9 @@
 </select><br>
 <button (click)="send()">전송</button>
 <table class="table table-dark">
-  <tr *ngFor="let col of columns">
-    <th><input type="text" [(ngModel)]="columns[cnt]">{{columns[cnt]}}</th>
-    <td>105</td>
+  <tr *ngFor="let col of columnsCnt">
+    <th><input type="text" [(ngModel)]="columnsValue[cnt]"></th>
+    <td>{{columnsValue[cnt]}}</td>
   </tr>
 </table>
 <button (click)="addColumns()">추가</button>

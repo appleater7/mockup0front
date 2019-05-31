@@ -9,20 +9,23 @@ import { parse } from 'url';
 export class IntroComponent implements OnInit {
   tableName:string = '';
   resultStr:string = '';
-  columns:number[] = [0,1,3,4,5];
+  columnsValue:string[] = [''];
+  columnsCnt:number[] = [0];
   cnt:number=0;
-  constructor() { }
+  
+  constructor() {}
 
   ngOnInit() {
   }
-  addColumns(){
-    this.cnt++;
-    this.columns.push(this.columns.length);
+  addColumns(){ 
+    this.cnt= this.cnt  
+    this.columnsCnt.push(this.cnt);
+    this.columnsValue.push(this.columnsValue[this.cnt]);
   }
   send() {
     alert(this.tableName);
-    for(var i=this.columns.length; i>0;i--){
-      alert(this.columns[this.columns.pop()]);
+    for(var i=0;i<this.columnsValue.length;i++){
+      console.log(this.columnsValue[i]);
     }
   }
 
